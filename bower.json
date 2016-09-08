@@ -1,0 +1,23 @@
+{
+  "name": "notepad",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "Stan de Horn"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "moment": "^2.14.1",
+    "sweetalert": "^1.1.3"
+  }
+}

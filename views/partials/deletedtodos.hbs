@@ -1,0 +1,28 @@
+<ul class="collection" id="todo-list">
+    {{#each todos}}
+        {{#each this}}
+            {{#if this.active}}
+            {{else}}
+                <li class="collection-item avatar">
+                    {{#if this.done}}
+                        <i class="material-icons circle {{this.priority}}">check</i>
+                    {{else}}
+                        <i data-id="{{@index}}" class="done circle {{this.priority}}"></i>
+                    {{/if}}
+                    <span class="title">{{this.title}}</span>
+                    <p>
+                        {{this.desc}} <br>
+                        <span class="grey-text">{{this.date_started}}</span> <br>
+                        {{#if this.date_ended}}
+                            <span class="grey-text">Date completed: {{this.date_ended}}</span> <br>
+                        {{else}}
+                            <span class="grey-text">Not completed</span> <br>
+                        {{/if}}
+                    </p>
+                    <a href="#" data-id="{{@index}}" class="del-perm secondary-content"><i class="material-icons red-text">delete_forever</i></a>
+                    <a href="#" data-id="{{@index}}" class="restore secondary-content"><i class="material-icons red-text">restore</i></a>
+                </li>
+            {{/if}}
+        {{/each}}
+    {{/each}}
+</ul>
